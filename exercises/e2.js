@@ -4,14 +4,16 @@
 /**
  * ====================================================
  * Create a function that works as follows:
-   * The function name is 'rectArea'
-   * The function returns the value of the area of a rectangle (sideA * sideB)
-   * The function takes 2 parameters (two sides) to calculate the area from
+ * The function name is 'rectArea'
+ * The function returns the value of the area of a rectangle (sideA * sideB)
+ * The function takes 2 parameters (two sides) to calculate the area from
  * rectArea(3, 2) => 6
-*/
+ */
 
 // Your function code starts here...
-
+function rectArea(w, l) {
+  return w * l;
+}
 
 // Use the function you created above to calculate the areas of 3 rooms
 // Assign the results to room1, room2, and room3 variables
@@ -19,7 +21,9 @@
 
 // Your code goes here:
 
-
+let room1 = rectArea(4, 6);
+let room2 = rectArea(13, 3);
+let room3 = rectArea(4, 8);
 
 /**
  * =============================================================
@@ -33,27 +37,26 @@
 
 // Your code goes here...
 
-
+function totalRoomsArea(rm1, rm2, rm3) {
+  return rm1 + rm2 + rm3;
+}
 
 // Make the function call in the parentheses of the console.log statement.
 // Use room1, room2, room3 variables as arguments for the function call
 const result = function () {
-    console.log(/* replace this comment with a function call here... */);
-}
-
-
+  console.log(totalRoomsArea(room1, room2, room3));
+};
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
 
-
 // Do not delete or change the lines beneath
 const f = {
-    rectArea: rectArea || undefined,
-    roomVars: [room1 || undefined, room2 || undefined, room3 || undefined],
-    totalRoomsArea: totalRoomsArea || undefined,
-    result: (room1 && room2 && room3) ? result : undefined,
-}
+  rectArea: rectArea || undefined,
+  roomVars: [room1 || undefined, room2 || undefined, room3 || undefined],
+  totalRoomsArea: totalRoomsArea || undefined,
+  result: room1 && room2 && room3 ? result : undefined,
+};
 export { f };
